@@ -1,0 +1,27 @@
+<%= form_with model: @book, local:true do |f| %>
+  <h2>New book</h2>
+  <h4>title</h4>
+  <%= f.text_field :title %>
+  <h4>option</h4>
+  <%= f.text_area :body %>
+  <%= f.submit 'Create' %>
+<% end %>
+<% @books.each do |book| %>
+<%= attachment_image_tag user_image, :image %>
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th>title</th>
+      <th>option</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td></td>
+      <td><%= book.title%></td>
+      <td><%= book.body%></td>
+    </tr>
+  </tbody>
+</table>
+<% end %>
