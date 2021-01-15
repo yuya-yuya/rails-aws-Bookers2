@@ -1,0 +1,24 @@
+<%= render 'users/list', user: @user %>
+<%= render 'users/list', book: @book %>
+<% @users.each do |user| %>
+  <h1>Users</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>image</th>
+        <th>name</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <rd></rd>
+        <rd><%= user.name%></rd>
+        <rd><%= link_to"Show"%></rd>
+      </tr>
+    </tbody>
+  </table>
+<% end %>
+  
+  
+  

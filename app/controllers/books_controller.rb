@@ -1,7 +1,6 @@
 class BooksController < ApplicationController
 
   def index
-    @book = Book.new
     @books = Book.all
   end
   
@@ -12,11 +11,6 @@ class BooksController < ApplicationController
     redirect_to books_path
   end
 
-  def show
-  end
-
-  def destroy
-  end
   
   private
 

@@ -1,0 +1,18 @@
+<% @books.each do |book| %>
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th>title</th>
+      <th>option</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td></td>
+      <td><%= book.title%></td>
+      <td><%= book.body%></td>
+    </tr>
+  </tbody>
+</table>
+<% end %>
