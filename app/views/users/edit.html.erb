@@ -1,0 +1,16 @@
+<%= form_with model: @user, url: edit_user_registration_path, local:true do |f| %>
+  <h2>User info</h2>
+  <p>
+    Name<br>  
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    Image
+    
+  </p>
+  <p>
+    Introduction<br>
+    <%= f.text_area :introduction %><br>
+  </p>
+    <%= f.submit 'Create' %>
+<% end %>

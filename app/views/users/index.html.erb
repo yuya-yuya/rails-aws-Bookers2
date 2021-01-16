@@ -1,7 +1,6 @@
-<%= render 'users/list', user: @user %>
-<%= render 'users/list', book: @book %>
+<%= render 'users/list', user: @user ,book: @book %>
+<h1>Users</h1>
 <% @users.each do |user| %>
-  <h1>Users</h1>
   <table>
     <thead>
       <tr>

@@ -1,5 +1,6 @@
-<% @books.each do |book| %>
+<%= render 'users/list', user: @user ,book: @book %>
 <h2>Books</h2>
+<% @books.each do |book| %>
   <table>
     <thead>
       <tr>
