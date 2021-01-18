@@ -1,16 +1,16 @@
-<%= form_with model: @user, url: edit_user_registration_path, local:true do |f| %>
+<%= form_with model: @user, url: user_path(@user.id), local: true do |f| %>
   <h2>User info</h2>
   <p>
     Name<br>  
     <%= f.text_field :name %>
   </p>
   <p>
-    Image
-    
+    Image<br>
+    <%= f.attachment_field :profile_image %>
   </p>
   <p>
     Introduction<br>
     <%= f.text_area :introduction %><br>
   </p>
-    <%= f.submit 'Create' %>
+    <%= f.submit 'Update User' %>
 <% end %>
