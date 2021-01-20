@@ -1,9 +1,15 @@
 <%= notice %>
-<h2>User info</h2>
-<%= attachment_image_tag user, :profile_image, size:"100x100", format: 'jpeg', fallback: "no_image.jpg" %>
-<P>name	 <%= user.name %></p>
-<P>introduction	 <%=user.introduction %></p>
-<%= link_to"edit" , edit_user_path(current_user) ,class: "btn btn-light"%>
+<div>
+  <h2>User info</h2>
+  <%= attachment_image_tag user, :profile_image, size:"100x100", format: 'jpeg', fallback: "no_image.jpg" %>
+  <P>name	 <%= user.name %></p>
+  <P>introduction	 <%=user.introduction %></p>
+  <div>
+    <%= link_to edit_user_path(current_user) ,class: "btn btn-light", :style=>"width: 50px", method: :get do%>
+      <i class="fas fa-user-cog"></i>
+    <% end %>
+  </div>
+</div>
 
 <%= form_with model: book, local:true do |f| %>
   <h2>New book</h2>
@@ -13,3 +19,5 @@
   <%= f.text_area :body %><br>
   <%= f.submit 'Create' ,class: "btn btn-success"%>
 <% end %>
+
+            
