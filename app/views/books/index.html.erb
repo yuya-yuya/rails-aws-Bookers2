@@ -1,9 +1,9 @@
 <div class="container">
   <div class="row">
-    <div class="col-lg-4">
+    <div class="col-md-3">
       <%= render 'users/list', user: @user ,book: @book %>
     </div>
-    <div class="col-lg-8">
+    <div class="col-md-9">
       <h2>Books</h2>
       <% @books.each do |book| %>
       <table class="table table-striped">
@@ -15,9 +15,14 @@
           </tr>
         </thead>
         <tbody>
-          <td></td>
-          <td><%= book.title%></td>
-          <td><%= book.body %></td>
+          <tr>
+            <td>
+              <%= link_to"prof"%>
+              
+            </td>
+            <td><%= link_to book.title, book_path(current_user)%></td>
+            <td><%= book.body %></td>
+          </tr>
         </tbody>
       </table>
       <% end %>
