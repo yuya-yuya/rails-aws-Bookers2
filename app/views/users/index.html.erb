@@ -17,9 +17,9 @@
           </thead>
           <tbody>
             <tr>
-              <rd></rd>
-              <rd><%= user.name%></rd>
-              <rd><%= link_to"Show" ,user_path(@user.id)%></rd>
+              <td><%= attachment_image_tag user, :profile_image %></td>
+              <td><%= user.name%></td>
+              <td><%= link_to"Show" ,user_path(user.id)%></td>
             </tr>
           </tbody>
         </table>
