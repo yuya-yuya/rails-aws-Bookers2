@@ -17,10 +17,9 @@
         <tbody>
           <tr>
             <td>
-              <%= link_to"prof"%>
               
             </td>
-            <td><%= link_to book.title, book_path(current_user)%></td>
+            <td><%= link_to book.title, book_path(book.id)%></td>
             <td><%= book.body %></td>
           </tr>
         </tbody>
@@ -28,5 +27,4 @@
       <% end %>
       </div>
     </div>
-  </div>
-</div>
+  </div

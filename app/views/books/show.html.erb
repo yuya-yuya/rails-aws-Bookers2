@@ -15,7 +15,7 @@
           <tr>
             <td>
               <%= link_to user_path(current_user) do%>
-               <%= attachment_image_tag post_image, :image %>
+               <!--<%= attachment_image_tag @users, :profile_image, size:"100x100", format: 'jpeg', fallback: "no_image.jpg" %>-->
                <%= @users.name%>
               <% end %>
             </td>
