@@ -1,8 +1,10 @@
 class UsersController < ApplicationController
   def show
     @user = current_user
+    @users = User.find(params[:id])
     @book = Book.new
     @books = @user.books
+    @books1 = @users.books
   end
   
   def index
@@ -20,8 +22,11 @@ class UsersController < ApplicationController
   
   def update
     @user = User.find(params[:id])
-    @user.update(user_params)
-     redirect_to user_path(@user.id) 
+    if @user.update(user_params)
+      redirect_to user_path(@user.id) ,notice: "You have been updated successfully"
+    else
+      render :edit
+    end
   end
   
   def create
@@ -41,3 +46,4 @@ class UsersController < ApplicationController
     params.require(:book).permit(:title, :body)
   end
 end
+
