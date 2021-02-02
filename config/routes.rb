@@ -6,7 +6,9 @@ Rails.application.routes.draw do
   }
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   
-  resources :books, only: [:new, :create, :index, :show, :destroy,:edit,:update]
+  resources :books, only: [:new, :create, :index, :show, :destroy,:edit,:update] do
+    resources :book_comments, only: [:create, :destroy]
+  end
   resources :users, only: [:show, :index, :edit, :update]
   root to: 'home#top'
 end
