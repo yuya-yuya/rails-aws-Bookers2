@@ -3,8 +3,8 @@ class CreateBookComments < ActiveRecord::Migration[5.2]
     create_table :book_comments do |t|
       t.text :comment
       t.integer :user_id
-      post_image_id :integer
-
+      t.integer :book_id
+     
       t.timestamps
     end
   end

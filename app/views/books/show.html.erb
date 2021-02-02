@@ -28,8 +28,8 @@
         </tbody>
       </table>
       <div class="comments">
-        <p>コメント件数：<%= @books.comments.count %></p>
-        <% @books.comments.each do |books| %>
+        <p>コメント件数：<%= @books.book_comments.count %></p>
+        <% @books.book_comments.each do |books| %>
           <p><%= image_tag('sample-author1.jpg') %></p>
           <%= books.user.name %>
           <%= books.created_at.strftime('%Y/%m/%d') %><%= books.comment %>
