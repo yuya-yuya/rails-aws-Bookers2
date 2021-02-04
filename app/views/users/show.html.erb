@@ -15,6 +15,7 @@
             <th></th>
             <th>title</th>
             <th>option</th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
@@ -26,6 +27,11 @@
             </td>
             <td><%= link_to book.title, book_path(book.id)%></td>
             <td><%= book.body%></td>
+            <td>
+              <div class="comments">
+              <p>コメント件数：<%= book.book_comments.count %></p>
+              </div>
+            </td>
           </tr>
         </tbody>
       </table>
@@ -48,6 +54,7 @@
             <th></th>
             <th>title</th>
             <th>option</th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
@@ -59,6 +66,11 @@
             </td>
             <td><%= link_to book.title, book_path(book.id)%></td>
             <td><%= book.body%></td>
+            <td>
+              <div class="comments">
+              <p>コメント件数：<%= book.book_comments.count %></p>
+              </div>
+            </td>
           </tr>
         </tbody>
       </table>
