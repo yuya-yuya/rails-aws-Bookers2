@@ -50,7 +50,7 @@
           <%= books.created_at.strftime('%Y/%m/%d') %><%= books.comment %>
           <% if books.user == current_user %>
           <div class="comment-delete">
-            <%= link_to "削除", book_book_comment_path(books.comment), method: :delete %>
+            <%= link_to "削除", book_book_comment_path(books.id, books.comment), method: :delete %>
           </div>
           <% end %>
         <% end %>
