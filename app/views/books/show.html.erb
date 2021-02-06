@@ -44,13 +44,13 @@
       </table>
       <div class="comments">
         <p>コメント件数：<%= @books.book_comments.count %></p>
-        <% @books.book_comments.each do |books| %>
+        <% @books.book_comments.each do |bookcomment| %>
           <p><%= image_tag('sample-author1.jpg') %></p>
-          <%= books.user.name %>
-          <%= books.created_at.strftime('%Y/%m/%d') %><%= books.comment %>
-          <% if books.user == current_user %>
+          <%= bookcomment.user.name %>
+          <%= bookcomment.created_at.strftime('%Y/%m/%d') %><%= bookcomment.comment %>
+          <% if bookcomment.user == current_user %>
           <div class="comment-delete">
-            <%= link_to "削除", book_book_comment_path(books.id, books.comment), method: :delete %>
+            <%= link_to "削除", book_book_comment_path(bookcomment.book, bookcomment), method: :delete %>
           </div>
           <% end %>
         <% end %>
